@@ -1,4 +1,5 @@
-function createRequests() {
+function createRequests() 
+{
     const docProperties = PropertiesService.getDocumentProperties();
     const consumer_key = docProperties.getProperty('consumer_key');
     const consumer_secret = docProperties.getProperty('consumer_secret');
