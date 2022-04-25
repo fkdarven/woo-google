@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <base target="_top">
+</head>
+
+<body>
+    <h1>Configurações Gerais </h1>
+    <b style="color:red"><small>Não há necessidade de inserir as informações em todas as execuções</small></b>
+    <form>
+        <label for="consumer_key">Chave do Consumidor:</label><br>
+        <input type="password" id="consumer_key" name="consumer_key" value=""><br>
+        <label for="consumer_secret">Segredo do Consumidor:</label><br>
+        <input type="password" id="consumer_secret" name="consumer_secret" value=""><br>
+        <label for="store_url">Url da Integração:</label><br>
+        <input type="password" id="store_url" name="store_url" value=""><br><br>
+        <input type="submit" value="Salvar" onclick="sendData();">
+        <hr>
+    </form>
+
+</html>
+<script>
+    function sendData() {
+        let consumer_key = document.getElementById('consumer_key').value;
+        let consumer_secret = document.getElementById('consumer_secret').value;
+        let store_url = document.getElementById('store_url').value;
+        google.script.run.setProperties(consumer_key, consumer_secret, store_url);
+    }
+</script>
